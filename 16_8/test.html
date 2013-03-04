@@ -104,12 +104,10 @@
                 var tblBodyObj = document.getElementById("ProductTable").tBodies[0];
 
                 for (var i=1; i<tblBodyObj.rows.length; i++) {
-                    var current = document.getElementById("image_1").getAttribute("src");
-                    var newCell = document.getElementById("image_1").setAttribute("onmouseover", "this.src='"+data.images[1].imagePath+"';");
-                    var newCell = document.getElementById("image_1").setAttribute("onmouseout", "this.src='"+current+"';");
                     var prodID = tblBodyObj.rows[i].getElementsByTagName("td")[0].innerHTML;
-
-                    //alert(newCell);
+                    var current = document.getElementById("image_"+prodID).getAttribute("src");
+                    var newCell = document.getElementById("image_"+prodID).setAttribute("onmouseover", "this.src='"+data.images[prodID-1].imagePath+"';");
+                    var newCell = document.getElementById("image_"+prodID).setAttribute("onmouseout", "this.src='"+current+"';");
                 }
             }
         }

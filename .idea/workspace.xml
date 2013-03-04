@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6cffafc8-988b-4303-9688-95d1ad6a8b53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/16_8/products.html" afterPath="$PROJECT_DIR$/16_8/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/16_8/test.html" afterPath="$PROJECT_DIR$/16_8/test.html" />
     </list>
     <ignored path="Module6.iws" />
@@ -27,7 +26,7 @@
       <file leaf-file-name="test.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/16_8/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="13" selection-start="4072" selection-end="4072" vertical-scroll-proportion="0.4025559">
+            <state line="109" column="129" selection-start="4761" selection-end="4761" vertical-scroll-proportion="0.5111821">
               <folding />
             </state>
           </provider>
@@ -313,7 +312,11 @@
       <created>1362370472867</created>
       <updated>1362370472867</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Mouseover beta&#10;">
+      <created>1362376056254</created>
+      <updated>1362376056254</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -396,7 +399,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product description now working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mouseover beta&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -414,6 +417,7 @@
     <MESSAGE value="callback example working&#10;" />
     <MESSAGE value="Asynch isolated &#10;" />
     <MESSAGE value="Product description now working" />
+    <MESSAGE value="Mouseover beta&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -566,7 +570,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/16_8/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="13" selection-start="4072" selection-end="4072" vertical-scroll-proportion="0.4025559">
+        <state line="109" column="129" selection-start="4761" selection-end="4761" vertical-scroll-proportion="0.5111821">
           <folding />
         </state>
       </provider>
