@@ -1,0 +1,9 @@
+{
+    "products": [
+        { "id":"1" , "productTitle":"Logitech Z 506 Speaker" , "thumbImagePath":"http://www.logitech.com/assets/31227/5/surround-sound-speakers-z506.png" , "price":"85"},
+        { "id":"2" , "productTitle":"Logitech G19 Keyboard" , "thumbImagePath":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQFfpwpPPbGq11GRSzNHdN1Osg0bVtbEdc8Q2TJ-VdkHmD1KuBT" , "price":"120"},
+        { "id":"3" , "productTitle":"Logitech Gaming Mouse" , "thumbImagePath":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-iiqkIjOi-hQLTvZWwjwq-7jabuW33A86uxaQOcruFvayq9_4Q" , "price":"85"},
+        { "id":"4" , "productTitle":"Logitech Webcam" , "thumbImagePath":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_Wr8e9NsRQUSya7ZiEl5gZ_0p4ee5mvt6XmerL2r33ENl3-X" , "price":"115"},
+        { "id":"5" , "productTitle":"Mediacenter Keyboard" , "thumbImagePath":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSuPl_NC_x5Alk0zAY8m50pgPzfdX4TSg_TdrPs7rRwo7YWhWW2" , "price":"120"}
+    ]
+}

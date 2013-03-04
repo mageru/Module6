@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>M4 Canvas - Justin Miller</title>
+    <!-- Draw smiley face with canvas -->
+    <script type="application/javascript">
+        function draw() {
+            "use strict";
+            var canvas, ctx;
+            canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                ctx = document.getElementById('canvas').getContext('2d');
+                ctx.strokeStyle = "red";
+                ctx.beginPath();
+                ctx.arc(150, 150, 100, 0, Math.PI * 2, true);
+                ctx.moveTo(220, 150);
+                ctx.arc(150, 150, 70, 0, Math.PI, false);
+                ctx.moveTo(130, 130);
+                ctx.arc(120, 130, 10, 0, Math.PI * 2, true);
+                ctx.moveTo(190, 130);
+                ctx.arc(180, 130, 10, 0, Math.PI * 2, true);
+                ctx.stroke();
+            }
+        }
+    </script>
+</head>
+
+<body onload="draw();">
+<canvas id="canvas" width="300" height="300">Your browser does not support canvas.</canvas>
+</body>
+</html>
