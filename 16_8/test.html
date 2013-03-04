@@ -24,7 +24,7 @@
             } // end catch
         }
 
-        function parseData( asyncRequest )
+        function displa( asyncRequest )
         {
             // if request has completed successfully process the response
             if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
@@ -35,12 +35,13 @@
             } // end if
         } // end function parseData
 
-
-
         // use the DOM to display the retrieved address book entries
-        function displayNames(data)
+        function displayTable( asyncRequest )
         {
+            if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+            {
                 var $table = $('<table border="1" id="ProductTable"/>');
+                var data = JSON.parse(asyncRequest.responseText)
                 //$table.setAttribute("border", 1);
 
                 var $row = $('<tr/>');
@@ -72,11 +73,11 @@
 
                 //append table to the body
                 $('body').append($table);
-            // get the placeholder element from the page
+            }// get the placeholder element from the page
         } // end function displayAll
 
         function start() {
-            callFunction("products.json", parseData );
+            callFunction("products.json", displayTable );
         }
 
         window.addEventListener("load", start, false);
