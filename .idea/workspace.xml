@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6cffafc8-988b-4303-9688-95d1ad6a8b53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/16_8/products.html" afterPath="$PROJECT_DIR$/16_8/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/16_8/test.html" afterPath="$PROJECT_DIR$/16_8/test.html" />
     </list>
     <ignored path="Module6.iws" />
@@ -26,7 +27,34 @@
       <file leaf-file-name="test.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/16_8/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="36" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.42250532">
+            <state line="87" column="52" selection-start="3435" selection-end="3435" vertical-scroll-proportion="0.3258786">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="descriptions.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/16_8/descriptions.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="40" selection-start="46" selection-end="64" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/16_8/products.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="61" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/16_8/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="49" selection-start="2901" selection-end="2901" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
@@ -60,10 +88,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="172" />
-    <option name="width" value="1616" />
-    <option name="height" value="834" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1014" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -183,7 +211,7 @@
     <configuration default="false" name="test.html" type="JavascriptDebugSession" factoryName="Remote" temporary="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="chrome" />
-        <option name="fileUrl" value="http://localhost:8080/Module6/16_8/test.html" />
+        <option name="fileUrl" value="http://dev-pros.com/Module6/16_8/test.html" />
       </JSRemoteDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -219,10 +247,11 @@
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.products.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.one.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.products.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.one.html" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +296,11 @@
       <created>1362362494591</created>
       <updated>1362362494591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Asynch isolated &#10;">
+      <created>1362363437040</created>
+      <updated>1362363437040</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -291,7 +324,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="172" width="1616" height="834" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1014" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17798595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -300,10 +333,10 @@
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19293621" sideWeight="0.19086652" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13062778" sideWeight="0.7744807" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22551928" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10859252" sideWeight="0.82201403" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17798595" sideWeight="0.49815497" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19293621" sideWeight="0.19086652" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17798595" sideWeight="0.49815497" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -463,13 +496,6 @@
         <state line="703" column="9" selection-start="31096" selection-end="31096" vertical-scroll-proportion="0.8832117" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/16_8/descriptions.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="423" selection-end="423" vertical-scroll-proportion="0.24817519">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/16_8/thumbs.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="1" selection-start="835" selection-end="835" vertical-scroll-proportion="0.2542056">
@@ -477,23 +503,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/16_8/products.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://localhost:8080/Module6/16_8/test.html">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/16_8/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="26" selection-start="1153" selection-end="1153" vertical-scroll-proportion="27.666666">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/16_8/images.json">
@@ -517,9 +529,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/16_8/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16_8/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="49" selection-start="2901" selection-end="2901" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16_8/descriptions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="46" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/16_8/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="36" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.42250532">
+        <state line="87" column="52" selection-start="3435" selection-end="3435" vertical-scroll-proportion="0.3258786">
           <folding />
         </state>
       </provider>

@@ -6,22 +6,14 @@
     <script type="text/javascript">
         var asyncRequest;
 
-        function callJSON( filename, callBack )
+        function callFunction( url, callback )
         {
-            // build request URL string
-            var requestUrl = filename;
-
-            // attempt to send the asynchronous request
-            try
-            {
-                var asyncRequest = new XMLHttpRequest(); // create request
-
-                // set up callback function and store it
+            try {
+                var asyncRequest = new XMLHttpRequest();
                 asyncRequest.addEventListener("readystatechange",
-                        function() { callBack( asyncRequest ); }, false);
+                        function() { callback(asyncRequest);}, false);
 
-                // send the asynchronous request
-                asyncRequest.open( "GET", requestUrl, true );
+                asyncRequest.open("GET", url, true);
                 asyncRequest.setRequestHeader("Accept",
                         "application/json; charset=utf-8" );
                 asyncRequest.send(); // send request
@@ -32,35 +24,7 @@
             } // end catch
         }
 
-        function getJSON(url) {
-            try {
-                asyncRequest = new XMLHttpRequest();
-                asyncRequest.addEventListener("readystatechange", displayNames(asyncRequest), false);
-                asyncRequest.open("GET",url, true);
-                asyncRequest.setRequestHeader("Accept",
-                        "application/json; charset=utf-8" );
-                asyncRequest.send();
-            }
-            catch (exception) {
-                alert("Request Failed");
-            }
-        } // end function getJSON
-
-        function getProducts(url) {
-            try {
-                asyncRequest = new XMLHttpRequest();
-                asyncRequest.addEventListener("readystatechange", displayNames, false);
-                asyncRequest.open("GET",url, true);
-                asyncRequest.setRequestHeader("Accept",
-                        "application/json; charset=utf-8" );
-                asyncRequest.send();
-            }
-            catch (exception) {
-                alert("Request Failed");
-            }
-        } // end function getJSON
-
-        function parseData()
+        function displa( asyncRequest )
         {
             // if request has completed successfully process the response
             if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
@@ -71,52 +35,13 @@
             } // end if
         } // end function parseData
 
-        function syntaxHighlight(json) {
-            if (typeof json != 'string') {
-                json = JSON.stringify(json, undefined, 2);
-            }
-            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-                var cls = 'number';
-                if (/^"/.test(match)) {
-                    if (/:$/.test(match)) {
-                        cls = 'key';
-                    } else {
-                        cls = 'string';
-                    }
-                } else if (/true|false/.test(match)) {
-                    cls = 'boolean';
-                } else if (/null/.test(match)) {
-                    cls = 'null';
-                }
-                return '<span class="' + cls + '">' + match + '</span>';
-            });
-        }
-
-        function getDescription(id) {
-            try {
-                asyncRequest = new XMLHttpRequest();
-                asyncRequest.addEventListener("readystatechange", descriptionText, false);
-                asyncRequest.open("GET","descriptions.json", true);
-                asyncRequest.setRequestHeader("Accept",
-                        "application/json; charset=utf-8" );
-                asyncRequest.send();
-            }
-            catch (exception) {
-                alert("Request Failed");
-            }
-        } // end function getJSON
-
-
-
         // use the DOM to display the retrieved address book entries
-        function displayNames()
+        function displayTable( asyncRequest )
         {
             if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
             {
-                // convert the JSON string to an Object
-                var data = JSON.parse(asyncRequest.responseText);
                 var $table = $('<table border="1" id="ProductTable"/>');
+                var data = JSON.parse(asyncRequest.responseText)
                 //$table.setAttribute("border", 1);
 
                 var $row = $('<tr/>');
@@ -148,13 +73,11 @@
 
                 //append table to the body
                 $('body').append($table);
-            } // end if
-            // get the placeholder element from the page
-
+            }// get the placeholder element from the page
         } // end function displayAll
 
         function start() {
-            getProducts("products.json");
+            callFunction("products.json", displayTable );
         }
 
         window.addEventListener("load", start, false);

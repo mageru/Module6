@@ -4,6 +4,7 @@
     <title>Product Catalog for Exercise 16.8</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
+        var asyncRequest;
 
         function callFunction( url, callback )
         {
@@ -40,7 +41,7 @@
             if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
             {
                 var $table = $('<table border="1" id="ProductTable"/>');
-                var data = JSON.parse(asyncRequest.responseText)
+                var data = JSON.parse(asyncRequest.responseText);
                 //$table.setAttribute("border", 1);
 
                 var $row = $('<tr/>');
@@ -75,8 +76,28 @@
             }// get the placeholder element from the page
         } // end function displayAll
 
+        // use the DOM to display the retrieved address book entries
+        function addDescription( asyncRequest )
+        {
+            if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+            {
+                var data = JSON.parse(asyncRequest.responseText);
+                var tblBodyObj = document.getElementById("ProductTable").tBodies[0];
+
+                var titleCell = tblBodyObj.rows[0].insertCell(-1);
+                titleCell.innerHTML = "Descriptions"
+
+                for (var i=1; i<tblBodyObj.rows.length; i++) {
+                    var newCell = tblBodyObj.rows[i].insertCell(-1);
+                    var prodID = tblBodyObj.rows[i].getElementsByTagName("td")[0].innerHTML;
+                    newCell.innerHTML = data.descriptions[prodID-1].productDescription
+                }
+            }
+        }
+
         function start() {
             callFunction("products.json", displayTable );
+            callFunction("descriptions.json", addDescription )
         }
 
         window.addEventListener("load", start, false);
