@@ -4,14 +4,14 @@
     <title>Product Catalog for Exercise 16.8</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var asyncRequest;
+
 
         function callFunction( url, callback )
         {
             try {
                 var asyncRequest = new XMLHttpRequest();
                 asyncRequest.addEventListener("readystatechange",
-                    function() { callback(asyncRequest);}, false);
+                        function() { callback(asyncRequest);}, false);
 
                 asyncRequest.open("GET", url, true);
                 asyncRequest.setRequestHeader("Accept",
@@ -64,7 +64,9 @@
                     //create last_name
                     var imageTag = document.createElement("img");
                     imageTag.setAttribute("src", value.thumbImagePath);
-                    $('<td/>').append( imageTag ).appendTo($row);
+                    //imageTag.setAttribute("onMouseOver", getBigImage(value.id));
+                    imageTag.setAttribute("id", "image_"+value.id);
+                    $('<td id="image"/>').append( imageTag ).appendTo($row);
 
                     $('<td/>').text("$"+value.price+".00").appendTo($row);
 
@@ -95,9 +97,27 @@
             }
         }
 
+        function addMouseOver( asyncRequest ) {
+            if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+            {
+                var data = JSON.parse(asyncRequest.responseText);
+                var tblBodyObj = document.getElementById("ProductTable").tBodies[0];
+
+                for (var i=1; i<tblBodyObj.rows.length; i++) {
+                    var current = document.getElementById("image_1").getAttribute("src");
+                    var newCell = document.getElementById("image_1").setAttribute("onmouseover", "this.src='"+data.images[1].imagePath+"';");
+                    var newCell = document.getElementById("image_1").setAttribute("onmouseout", "this.src='"+current+"';");
+                    var prodID = tblBodyObj.rows[i].getElementsByTagName("td")[0].innerHTML;
+
+                    //alert(newCell);
+                }
+            }
+        }
+
         function start() {
             callFunction("products.json", displayTable );
-            callFunction("descriptions.json", addDescription )
+            callFunction("descriptions.json", addDescription );
+            callFunction("images.json", addMouseOver );
         }
 
         window.addEventListener("load", start, false);
