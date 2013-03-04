@@ -5,7 +5,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-
         function callFunction( url, callback )
         {
             try {
@@ -20,7 +19,7 @@
             } // end try
             catch ( exception )
             {
-                alert ( "Request Failed" );
+                alert ( "Request Failed" + exception );
             } // end catch
         }
 
@@ -92,7 +91,18 @@
                 for (var i=1; i<tblBodyObj.rows.length; i++) {
                     var newCell = tblBodyObj.rows[i].insertCell(-1);
                     var prodID = tblBodyObj.rows[i].getElementsByTagName("td")[0].innerHTML;
-                    newCell.innerHTML = data.descriptions[prodID-1].productDescription
+
+                    var button = document.createElement("button");
+                    button.setAttribute("onclick", "switchMain('description_" + (prodID-1) + "')");
+                    button.innerHTML = "Show Description";
+                    button.setAttribute("type","button");
+                    newCell.appendChild(button);
+
+                    var descDiv = document.createElement("div");
+                    descDiv.setAttribute("id","description_"+(prodID-1));
+                    descDiv.setAttribute("style", "visibility:hidden");
+                    descDiv.innerHTML = data.descriptions[prodID-1].productDescription;
+                    newCell.appendChild(descDiv);
                 }
             }
         }
@@ -117,6 +127,29 @@
             callFunction("descriptions.json", addDescription );
             callFunction("images.json", addMouseOver );
         }
+
+        function getStyle( id )
+        {
+            var temp = document.getElementById(id).style.visibility;
+
+            return temp;
+        }
+
+        function switchMain( id )
+        {
+
+            var current = getStyle( id );
+
+            if( current == "visible" )
+            {
+                document.getElementById(id).style.visibility = "hidden";
+            }
+            else
+            {
+                document.getElementById(id).style.visibility = "visible";
+            }
+        }
+
 
         window.addEventListener("load", start, false);
 
