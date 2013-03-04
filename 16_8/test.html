@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Catalog for Exercise 16.8</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var asyncRequest;
+
+        function callFunction( url, callback )
+        {
+            try {
+                var asyncRequest = new XMLHttpRequest();
+                asyncRequest.addEventListener("readystatechange",
+                    function() { callback(asyncRequest);}, false);
+
+                asyncRequest.open("GET", url, true);
+                asyncRequest.setRequestHeader("Accept",
+                        "application/json; charset=utf-8" );
+                asyncRequest.send(); // send request
+            } // end try
+            catch ( exception )
+            {
+                alert ( "Request Failed" );
+            } // end catch
+        }
+
+        function parseData( asyncRequest )
+        {
+            // if request has completed successfully process the response
+            if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+            {
+                // convert the JSON string to an Object
+                var data = JSON.parse(asyncRequest.responseText);
+                displayNames(data);
+            } // end if
+        } // end function parseData
+
+
+
+        // use the DOM to display the retrieved address book entries
+        function displayNames(data)
+        {
+                var $table = $('<table border="1" id="ProductTable"/>');
+                //$table.setAttribute("border", 1);
+
+                var $row = $('<tr/>');
+                $('<td/>').text("ID").appendTo($row);
+                $('<td/>').text("Name").appendTo($row);
+                $('<td/>').text("Image").appendTo($row);
+                $('<td/>').text("Price").appendTo($row);
+                $table.append($row);
+
+                $.each(data.products, function(index, value) {
+                    //create a row
+                    var $row = $('<tr/>');
+
+                    //create the id column
+                    $('<td/>').text(value.id).appendTo($row);
+
+                    //create name column
+                    $('<td/>').text(value.productTitle).appendTo($row);
+
+                    //create last_name
+                    var imageTag = document.createElement("img");
+                    imageTag.setAttribute("src", value.thumbImagePath);
+                    $('<td/>').append( imageTag ).appendTo($row);
+
+                    $('<td/>').text("$"+value.price+".00").appendTo($row);
+
+                    $table.append($row);
+                });
+
+                //append table to the body
+                $('body').append($table);
+            // get the placeholder element from the page
+        } // end function displayAll
+
+        function start() {
+            callFunction("products.json", parseData );
+        }
+
+        window.addEventListener("load", start, false);
+
+    </script>
+</head>
+<body>
+<!--
+Displays product information in a table
+Should init display list of products names with associated thumbnails and prices.
+When hovers over thumbnail image, display larger image.
+When user moves mouse away from image, original thumb redisplayed.
+Should provide button for user to click to show product description
+-->
+<h1>Products</h1>
+<div id = "Products"></div>
+</body>
+</html>
